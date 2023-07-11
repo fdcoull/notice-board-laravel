@@ -5,6 +5,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>TEST</h1>
+    <div style="border: 3px solid black">
+        <h3>Sign up</h3>
+        <form action="/register" method="POST">
+            <input type="text" placeholder="Username">
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Register</button>
+        </form>
+    </div>
 </body>
 </html>
