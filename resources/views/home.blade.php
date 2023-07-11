@@ -9,9 +9,9 @@
         <h3>Sign up</h3>
         <form action="/register" method="POST">
             @csrf
-            <input type="text" placeholder="Username">
-            <input type="text" placeholder="Email">
-            <input type="password" placeholder="Password">
+            <input type="text" placeholder="Username" name="name">
+            <input type="text" placeholder="Email" name="email">
+            <input type="password" placeholder="Password" name="password">
             <button>Register</button>
         </form>
     </div>
