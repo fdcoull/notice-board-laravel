@@ -8,6 +8,7 @@
     <div style="border: 3px solid black">
         <h3>Sign up</h3>
         <form action="/register" method="POST">
+            @csrf
             <input type="text" placeholder="Username">
             <input type="text" placeholder="Email">
             <input type="password" placeholder="Password">
