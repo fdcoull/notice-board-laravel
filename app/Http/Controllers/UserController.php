@@ -23,6 +23,20 @@ class UserController extends Controller
         return 'Welcome to notice board!';
     }
 
+    public function login(Request $request) {
+        $inputFields = $request->validate([
+            'loginName' => 'required',
+            'loginPassword' => 'required'
+        ]);
+
+        if (auth()->attempt(['name' => $inputFields['loginName'], 'password' => $inputFields['loginPassword']])) {
+            $request->session()->regenerate();
+        }
+
+        return redirect('/');
+
+    }
+
     public function logout() {
         auth()->logout();
         return redirect('/');
