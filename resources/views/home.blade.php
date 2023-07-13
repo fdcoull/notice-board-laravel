@@ -21,6 +21,15 @@
             <button>Post</button>
         </form>
     </div>
+    <div style="border: 3px solid black">
+        <h3>All posts</h3>
+        @foreach($posts as $post)
+        <div style="border:1px solid black">
+            <h4>{{$post['title']}}</h4>
+            {{$post['body']}}
+        </div>
+        @endforeach
+    </div>
     @else
     <div style="border: 3px solid black">
         <h3>Sign up</h3>
